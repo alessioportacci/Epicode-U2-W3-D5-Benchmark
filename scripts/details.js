@@ -12,6 +12,9 @@ const updatedAt = document.getElementById("updatedAt")
 const userId = document.getElementById("userId")
 const id = document.getElementById("_id")
 
+const row = document.getElementById("box")
+
+
 const loadPage = function()
 {
   //Riempio i campi del form
@@ -31,6 +34,7 @@ const loadPage = function()
       //Carico l'immagine
       document.getElementById("img").setAttribute("src", detail.imageUrl)
 
+      document.getElementById("spinner").classList.toggle("d-none")
       //Inserisco i miei valori
       brand.innerHTML = detail.brand
       names.innerHTML = detail.name
@@ -41,7 +45,19 @@ const loadPage = function()
       userId.innerHTML = detail.userId
       id.innerHTML = detail._id
     })
-    .catch((err) => console.log(err))
-}
+    .catch((err) => 
+    {
+      console.log(err)
+      let col = document.createElement("div")
+      col.classList.add("text-center")
+
+      col.innerHTML = `
+                      <h1> C'è stato un errore :( </h1> 
+                      <h2> ${err.message} </h2>
+                      <img src="https://i.redd.it/zqqvyy6rtll61.png" style="width: 80%">
+                      `
+      row.innerHTML = ""
+      row.appendChild(col)
+    })}
 
 loadPage()
