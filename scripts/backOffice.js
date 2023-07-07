@@ -9,6 +9,8 @@ const URL = 'https://striveschool-api.herokuapp.com/api/product'
 const addressBarContent = new URLSearchParams(location.search)
 const productId = addressBarContent.get('id')
 
+const row = document.getElementById("box")
+
 //Viene chiamato dall'if a riga 61 (per rendere il codice più chiaro)
 const alterHTML = function()
 {
@@ -53,8 +55,20 @@ const fillForm = function()
       image.value = detail.imageUrl
       price.value = detail.price
     })
-    .catch((err) => console.log(err))
-}
+    .catch((err) => 
+    {
+      console.log(err)
+      let col = document.createElement("div")
+      col.classList.add("text-center")
+
+      col.innerHTML = `
+                      <h1> C'è stato un errore :( </h1> 
+                      <h2> ${err.message} </h2>
+                      <img src="https://i.redd.it/zqqvyy6rtll61.png" style="width: 80%">
+                      `
+      row.innerHTML = ""
+      row.appendChild(col)
+    })}
 
 //Se è presente un event ID, significa che stiamo modificando la pagina e dobbiamo cambiare cosa appare a schermo
 if (productId) 
@@ -125,6 +139,16 @@ document.getElementById('form').addEventListener('submit', function (e)
     .catch((err) => 
     {
       console.log(err)
+      let col = document.createElement("div")
+      col.classList.add("text-center")
+
+      col.innerHTML = `
+                      <h1> C'è stato un errore :( </h1> 
+                      <h2> ${err.message} </h2>
+                      <img src="https://i.redd.it/zqqvyy6rtll61.png" style="width: 80%">
+                      `
+      row.innerHTML = ""
+      row.appendChild(col)
     })
 })
 

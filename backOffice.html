@@ -15,7 +15,7 @@
 
     <title>backOffice</title>
   </head>
-  <body>
+  <body class="bg-danger">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
@@ -52,57 +52,71 @@
       </div>
     </nav>
 
-    <main>
-      <h1 id="title" class="text-center mt-5">Aggiungi un prodotto</h1>
-      <div class="container">
-        <div class="row row-cols-12">
-          <form id="form">
-            <!-- Nome -->
-            <div class="text-center mt-3">
-              <label for="name">Nome</label> <br />
-              <input required id="name" type="text" />
+    <main class="p-5">
+      <div id="box" class="bg-light border border-secondary border-2 rounded-3">
+        <h1 id="title" class="text-center mt-5">Aggiungi un prodotto</h1>
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-2 justify-content-center">
+            <!-- Mario -->
+            <div>
+              <img
+                class="w-90"
+                src="https://static.wixstatic.com/media/94b4ea_fd275e165a3a4c3e96a2d33b7f3e922a~mv2.png/v1/fill/w_440,h_440,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/mario%20with%20wrench%20moderator%20icon%20png%20WIT.png"
+              />
             </div>
-            <!-- Descrizione -->
-            <div class="text-center mt-3">
-              <label for="description">Descrizione</label> <br />
-              <input required id="description" type="text" />
-            </div>
-            <!-- Brand -->
-            <div class="text-center mt-3">
-              <label for="brand">Brand</label> <br />
-              <input required id="brand" type="text" />
-            </div>
-            <!-- Immagine -->
-            <div class="text-center mt-3">
-              <label for="image">Immagine</label> <br />
-              <input required id="image" type="url" />
-            </div>
-            <!-- Prezzo -->
-            <div class="text-center mt-3">
-              <label for="price">Prezzo</label> <br />
-              <input required id="price" type="number" />
-            </div>
-            <!-- Submit -->
-            <div id="submit-section" class="text-center mt-4">
-              <div class="row row-cols-12 row-cols-md-5 justify-content-center">
-                <div class="mt-1">
-                  <button id="reset" class="btn btn-secondary" type="">
-                    Reset
-                  </button>
+            <!-- Modifica -->
+            <div>
+              <form id="form">
+                <!-- Nome -->
+                <div class="mt-3">
+                  <label for="name">Nome</label> <br />
+                  <input class="w-100" required id="name" type="text" />
                 </div>
-                <div id="cancella" class="mt-1 d-none"></div>
-                <div class="mt-1">
-                  <button
-                    id="submit"
-                    class="btn btn-primary order-last"
-                    type="submit"
+                <!-- Descrizione -->
+                <div class="mt-3">
+                  <label for="description">Descrizione</label> <br />
+                  <input class="w-100" required id="description" type="text" />
+                </div>
+                <!-- Brand -->
+                <div class="mt-3">
+                  <label for="brand">Brand</label> <br />
+                  <input class="w-100" required id="brand" type="text" />
+                </div>
+                <!-- Immagine -->
+                <div class="mt-3">
+                  <label for="image">Immagine</label> <br />
+                  <input class="w-100" required id="image" type="url" />
+                </div>
+                <!-- Prezzo -->
+                <div class="mt-3">
+                  <label for="price">Prezzo</label> <br />
+                  <input class="w-100" required id="price" type="number" />
+                </div>
+                <!-- Submit -->
+                <div id="submit-section" class="mt-4 mb-2">
+                  <div
+                    class="row row-cols-12 row-cols-md-5 justify-content-center justify-content-md-evenly"
                   >
-                    Aggiungi
-                  </button>
+                    <div class="mt-1">
+                      <button id="reset" class="btn btn-secondary" type="">
+                        Reset
+                      </button>
+                    </div>
+                    <div id="cancella" class="mt-1 d-none"></div>
+                    <div class="mt-1">
+                      <button
+                        id="submit"
+                        class="btn btn-primary order-last"
+                        type="submit"
+                      >
+                        Aggiungi
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </form>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </main>

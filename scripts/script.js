@@ -46,12 +46,15 @@ fetch("https://striveschool-api.herokuapp.com/api/product",
     .catch((err) => 
     {
       console.log(err)
+      document.getElementById("spinner").classList.toggle("d-none")
       let col = document.createElement("div")
-      div.classList.add("text-center")
-      div.classList.add("text-white")
+      col.classList.add("text-center")
+      col.classList.add("text-white")
 
-      col.innerText = `
-                      
+      col.innerHTML = `
+                      <h1> C'è stato un errore :( </h1> 
+                      <h2> ${err.message} </h2>
+                      <img src="https://i.redd.it/zqqvyy6rtll61.png" style="width: 80%">
                       `
       row.appendChild(col)
     })
