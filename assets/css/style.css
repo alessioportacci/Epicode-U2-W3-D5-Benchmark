@@ -1,0 +1,29 @@
+.card:hover {
+    scale: 1.02;
+    z-index: 3;
+  }
+
+  @font-face {
+    font-family: Nintendo;
+    src: url(../fonts/Pretendo.ttf);
+  }
+
+  .nontendo {
+    font-family: Nintendo;
+  }
+
+  #p-footer{
+    font-size: 10px
+  }
+  #disclaimer {
+    font-size: 8px
+  }
+
+  .details-img{
+    max-width: 50em
+  }
+
+  #img-mario{
+    max-height: 450px; 
+    max-width: 430px
+  }

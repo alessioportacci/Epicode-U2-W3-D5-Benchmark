@@ -13,10 +13,17 @@
       crossorigin="anonymous"
     />
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Icona -->
+    <link rel="icon" type="image/x-icon" href="assets/img/mario.png" />
+
     <title>Details</title>
   </head>
   <body class="bg-danger">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light position-sticky fixed-top"
+    >
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
           <img
@@ -60,7 +67,7 @@
         <div class="row row-cols-12 text-center">
           <div>
             <div id="spinner" class="spinner-border m-5" role="status"></div>
-            <img class="w-100" style="max-width: 50em" id="img" src="" />
+            <img class="w-100 details-img" id="img" src="" />
           </div>
           <div id="content mt-5">
             <div class="row row-cols-4">
@@ -114,7 +121,18 @@
           </div>
         </div>
       </div>
+      <img
+        class="mx-auto d-block mt-3"
+        src="https://mario.wiki.gallery/images/e/e8/Toads_SMR.png"
+      />
     </main>
+
+    <footer>
+      <p class="mt-5 text-white text-end p-1" id="p-footer">
+        <span class="nontendo">Nintendo </span> e tutti i suoi marchi sono
+        registrati, vi prego, non denunciatemi
+      </p>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
