@@ -15,6 +15,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
+
     <!-- Icona -->
     <link rel="icon" type="image/x-icon" href="assets/img/mario.png" />
 
@@ -67,55 +68,41 @@
         <div class="row row-cols-12 text-center">
           <div>
             <div id="spinner" class="spinner-border m-5" role="status"></div>
-            <img class="w-100 details-img" id="img" src="" />
+            <img class="w-100" style="max-width: 50em" id="img" src="" />
           </div>
-          <div id="content mt-5">
+          <div id="content">
             <div class="row row-cols-4">
               <div>
-                <p>
-                  <span class="fw-bold"> Brand:</span> <span id="brand"></span>
-                </p>
+                <p class="fw-bold">Brand:</p>
+                <p id="brand" class="text-truncate"></p>
               </div>
               <div>
-                <p>
-                  <span class="fw-bold"> Name:</span> <span id="name"></span>
-                </p>
+                <p class="fw-bold">Name:</p>
+                <p id="name" class="text-truncate"></p>
               </div>
               <div>
-                <p>
-                  <span class="fw-bold"> Descrizione: </span>
-                  <span id="description"></span>
-                </p>
+                <p class="fw-bold">Descrizione:</p>
+                <p id="description" class="text-truncate"></p>
               </div>
               <div>
-                <p>
-                  <span class="fw-bold"> Prezzo: </span>
-                  <span id="price"></span>
-                </p>
+                <p class="fw-bold">Prezzo:</p>
+                <p id="price" class="text-truncate"></p>
               </div>
               <div>
-                <p>
-                  <span class="fw-bold"> Creato il: </span
-                  ><span id="createdAt"></span>
-                </p>
+                <p class="fw-bold">Creato il:</p>
+                <p id="createdAt" class="text-truncate"></p>
               </div>
               <div>
-                <p>
-                  <span class="fw-bold"> Aggiornato il:</span>
-                  <span id="updatedAt"></span>
-                </p>
+                <p class="fw-bold">Aggiornato il:</p>
+                <p id="updatedAt" class="text-truncate"></p>
               </div>
               <div>
-                <p>
-                  <span class="fw-bold"> Creatore: </span
-                  ><span id="userId"></span>
-                </p>
+                <p class="fw-bold">Creatore:</p>
+                <p id="userId" class="text-truncate"></p>
               </div>
               <div>
-                <p>
-                  <span class="fw-bold"> Id prodotto: </span
-                  ><span id="_id"></span>
-                </p>
+                <p class="fw-bold">Id prodotto:</p>
+                <p id="_id" class="text-truncate"></p>
               </div>
             </div>
           </div>
@@ -129,8 +116,8 @@
 
     <footer>
       <p class="mt-5 text-white text-end p-1" id="p-footer">
-        <span class="nontendo">Nintendo </span> e tutti i suoi marchi sono
-        registrati, vi prego, non denunciatemi
+        Nintendo e tutti i suoi marchi sono registrati, vi prego, non
+        denunciatemi
       </p>
     </footer>
 
